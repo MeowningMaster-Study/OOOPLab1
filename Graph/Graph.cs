@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace Lab1.Graph
 {
-    class Graph<TVertexData, TConnectionData>
+    class Graph<TVertexData, TEdges, TEdgeData> where TEdges : IEdges<TEdgeData>, new()
     {
         private readonly List<Vertex<TVertexData>> vertices;
-        private readonly Connections<TConnectionData> connections;
+        private readonly IEdges<TEdgeData> connections;
 
         public Graph()
         {
             this.vertices = new List<Vertex<TVertexData>>();
-            this.connections = new AdjacencyListConnections<TConnectionData>();
+            this.connections = new TEdges();
         }
 
         public int AddVertex(TVertexData data)

@@ -22,7 +22,7 @@ namespace Lab1
     {
         public MainWindow()
         {
-            var graph = new Graph.Graph<int, object>();
+            var graph = new Graph.Graph<int, Graph.AdjacencyList<object>, object>();
             graph.AddVertex(123);
             InitializeComponent();
         }

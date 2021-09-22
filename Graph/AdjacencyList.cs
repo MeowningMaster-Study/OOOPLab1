@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Lab1.Graph
 {
-    public class AdjacencyListConnections<T> : Connections<T>
+    public class AdjacencyList<T> : IEdges<T>
     {
-        private List<Dictionary<int, T>> storage;
+        private readonly List<Dictionary<int, T>> storage;
 
-        public AdjacencyListConnections()
+        public AdjacencyList()
         {
             this.storage = new List<Dictionary<int, T>>();
         }
