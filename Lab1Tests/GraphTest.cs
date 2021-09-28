@@ -1,6 +1,6 @@
 using NUnit.Framework;
-using Lab1.Graph;
-using Lab1.Graph.Edges;
+using Lab1Libraries.Graph;
+using Lab1Libraries.Graph.Edges;
 
 namespace Lab1Tests
 {
