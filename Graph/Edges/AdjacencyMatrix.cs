@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Lab1.Graph
+namespace Lab1.Graph.Edges
 {
     public class AdjacencyMatrix<TData> : IEdges<TData>
     {
@@ -12,10 +12,10 @@ namespace Lab1.Graph
 
         public AdjacencyMatrix()
         {
-            this.storage = new List<List<(bool, TData)>>();
+            storage = new List<List<(bool, TData)>>();
         }
 
-        public void AddEdge(int vertexOne, int vertexTwo, TData data)
+        public void Add(int vertexOne, int vertexTwo, TData data)
         {
             storage[vertexOne][vertexTwo] = (true, data);
             storage[vertexTwo][vertexOne] = (true, data);
@@ -32,10 +32,26 @@ namespace Lab1.Graph
             return count;
         }
 
-        public void RemoveEdge(int vertexOne, int vertexTwo)
+        public (bool, TData) Get(int vertexOne, int vertexTwo)
         {
-            storage[vertexOne][vertexTwo] = (false, default(TData));
-            storage[vertexTwo][vertexOne] = (false, default(TData));
+            return storage[vertexOne][vertexTwo];
+        }
+
+        public IEnumerable<(int, TData)> GetVertexEdgesEnumerator(int vertex)
+        {
+            for (int i = 0; i < storage[vertex].Count; i += 1)
+            {
+                if (storage[vertex][i].Item1)
+                {
+                    yield return (i, storage[vertex][i].Item2);
+                }
+            }
+        }
+
+        public void Remove(int vertexOne, int vertexTwo)
+        {
+            storage[vertexOne][vertexTwo] = (false, default);
+            storage[vertexTwo][vertexOne] = (false, default);
         }
 
         public void RemoveVertex(int vertex)
