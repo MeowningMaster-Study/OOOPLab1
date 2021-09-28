@@ -8,10 +8,10 @@ namespace Lab1.Graph
 {
     class Vertex<T>
     {
-        public T data;
+        public T storage;
         public Vertex(T data)
         {
-            this.data = data;
+            storage = data;
         }
     }
 }
