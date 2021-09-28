@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Lab1.Graph
 {
-    internal class Graph<TEdges, TVertexData, TEdgeData> where TEdges : Edges.IEdges<TEdgeData>, new()
+    public class Graph<TEdges, TVertexData, TEdgeData> where TEdges : Edges.IEdges<TEdgeData>, new()
     {
         public readonly Vertices<TVertexData> vertices;
         public readonly Edges.IEdges<TEdgeData> edges;

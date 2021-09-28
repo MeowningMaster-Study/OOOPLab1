@@ -24,19 +24,7 @@ namespace Lab1
         {
             InitializeComponent();
 
-            //var graph = new Graph.Graph<Graph.Edges.AdjacencyList<object>, int, object>();
-            //graph.AddVertex(123);
-            //graph.AddVertex(54);
-            //graph.edges.Add(0, 1, default);
-
-            Graph.Graph<Graph.Edges.AdjacencyList<object>, int, object> graph = new();
-            int v1 = graph.AddVertex(123);
-            int v2 = graph.AddVertex(54);
-            int v3 = graph.AddVertex(49);
-            graph.edges.Add(v1, v3, default);
-            graph.edges.Add(v2, v3, default);
-            Log(graph.IsConnected().ToString());
-            Log(graph.GetDistance(v1, v2).ToString());
+            Log("Бесполезный графический интерфейс");
         }
 
         private void Log(string text)

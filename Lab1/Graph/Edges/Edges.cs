@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Lab1.Graph.Edges
 {
-    interface IEdges<TData>
+    public interface IEdges<TData>
     {
         public int AddVertex();
         public void RemoveVertex(int vertex);

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Lab1.Graph
 {
-    internal class Vertices<TData>
+    public class Vertices<TData>
     {
         private readonly List<Vertex<TData>> storage;
 
