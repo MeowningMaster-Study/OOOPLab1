@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Lab1Libraries.IP;
 
 namespace Lab1
 {
@@ -25,9 +26,13 @@ namespace Lab1
             InitializeComponent();
 
             Log("Бесполезный графический интерфейс");
+            Log(IPv4.Parse("255.255.255.255/0").ToString());
+            Log(IPv6.Parse("::1/0").ToString());
+            Log(IPv6.Parse("11:22:F3A3:44:55:C66:77:88/16").HasSubnet(IPv6.Parse("11::0")).ToString());
+            Log(IPv4.Parse("255.255.255.255/0").ToIPv6().ToString());
         }
 
-        private void Log(string text)
+        void Log(string text)
         {
             logsBox.Text += '\n' + text;
         }
