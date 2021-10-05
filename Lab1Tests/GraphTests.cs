@@ -4,7 +4,7 @@ using Lab1Libraries.Graph.Edges;
 
 namespace Lab1Tests
 {
-    public class Tests
+    public class GraphTests
     {
         [SetUp]
         public void Setup()
