@@ -37,5 +37,16 @@ namespace Lab1
         {
             logsBox.Text += '\n' + text;
         }
+
+        private void CatButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (CatImage.Visibility == Visibility.Hidden)
+            {
+                CatImage.Visibility = Visibility.Visible;
+            } else
+            {
+                CatImage.Visibility = Visibility.Hidden;
+            }
+        }
     }
 }

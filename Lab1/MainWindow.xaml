@@ -7,6 +7,8 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <TextBox Name="logsBox" HorizontalAlignment="Stretch" Text="~Logs~" TextWrapping="Wrap" IsReadOnly="True"/>
+        <Image x:Name="CatImage" HorizontalAlignment="Right" Width="207" Source="/catty.gif" Visibility="Hidden"/>
+        <TextBox Name="logsBox" Text="~Logs~" TextWrapping="Wrap" IsReadOnly="True" Margin="0,0,216,0"/>
+        <Button x:Name="CatButton" Content="Button" HorizontalAlignment="Right" Margin="0,0,10,10" VerticalAlignment="Bottom" Click="CatButton_Click"/>
     </Grid>
 </Window>
