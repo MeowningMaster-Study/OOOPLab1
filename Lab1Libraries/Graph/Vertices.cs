@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace Lab1Libraries.Graph
 {
@@ -28,6 +24,12 @@ namespace Lab1Libraries.Graph
         public int Count()
         {
             return storage.Count;
+        }
+
+        public TData this[int i]
+        {
+            get => storage[i].Get();
+            set => storage[i].Set(value);
         }
     }
 }

@@ -1,15 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Lab1Libraries.Graph
+﻿namespace Lab1Libraries.Graph
 {
-    class Vertex<T>
+    internal class Vertex<T>
     {
         public T storage;
         public Vertex(T data)
+        {
+            storage = data;
+        }
+
+        public T Get()
+        {
+            return storage;
+        }
+
+        public void Set(T data)
         {
             storage = data;
         }
